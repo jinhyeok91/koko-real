@@ -112,6 +112,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -162,9 +163,9 @@
 .reply__column button:active {
   outline: none;
 }
-.reply:focus-within .reply__column:first-child,
-.reply:focus-within .fa-smile-wink,
-.reply:focus-within button {
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -176,5 +177,9 @@
 
 .reply:focus-within input {
   width: 93vw;
-  transform: translate(-10%);
+  transform: translate(-10%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
